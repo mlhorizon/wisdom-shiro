@@ -1,0 +1,812 @@
+22:00:02.670 889  [main] INFO  o.o.c.c.activators.DirectoryMonitor - Starting watcher service configured for [/Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/runtime, /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application]
+22:00:02.685 904  [main] INFO  o.o.c.c.activators.DirectoryMonitor - Starting file monitoring for application
+22:00:02.758 977  [main] INFO  o.o.c.c.activators.DirectoryMonitor - Opening deployer org.ow2.chameleon.core.activators.BundleDeployer@78b66d36 for directory /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/runtime.
+22:00:03.555 1774 [main] INFO  o.o.c.c.activators.DirectoryMonitor - Opening deployer org.ow2.chameleon.core.activators.BundleDeployer@78b66d36 for directory /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application.
+22:00:03.611 1830 [main] ERROR o.o.c.c.activators.BundleDeployer - Error during the starting of org.apache.commons.beanutils
+org.osgi.framework.BundleException: Unresolved constraint in bundle org.apache.commons.beanutils [56]: Unable to resolve 56.0: missing requirement [56.0] osgi.wiring.package; (osgi.wiring.package=org.apache.commons.collections.comparators)
+	at org.apache.felix.framework.Felix.resolveBundleRevision(Felix.java:3980) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.Felix.startBundle(Felix.java:2043) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.BundleImpl.start(BundleImpl.java:976) ~[org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.BundleImpl.start(BundleImpl.java:963) ~[org.apache.felix.framework-4.4.0.jar:na]
+	at org.ow2.chameleon.core.activators.BundleDeployer.open(BundleDeployer.java:192) [chameleon-core-1.0.9.jar:na]
+	at org.ow2.chameleon.core.activators.DirectoryMonitor.addingService(DirectoryMonitor.java:238) [chameleon-core-1.0.9.jar:na]
+	at org.ow2.chameleon.core.activators.DirectoryMonitor.addingService(DirectoryMonitor.java:52) [chameleon-core-1.0.9.jar:na]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:932) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:864) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:894) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.util.EventDispatcher.invokeServiceListenerCallback(EventDispatcher.java:943) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.util.EventDispatcher.fireEventImmediately(EventDispatcher.java:794) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.util.EventDispatcher.fireServiceEvent(EventDispatcher.java:544) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.Felix.fireServiceEvent(Felix.java:4425) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.Felix.registerService(Felix.java:3429) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.BundleContextImpl.registerService(BundleContextImpl.java:346) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.BundleContextImpl.registerService(BundleContextImpl.java:352) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.ow2.chameleon.core.activators.BundleDeployer.start(BundleDeployer.java:80) [chameleon-core-1.0.9.jar:na]
+	at org.ow2.chameleon.core.utils.FrameworkManager.start(FrameworkManager.java:108) [chameleon-core-1.0.9.jar:na]
+	at org.ow2.chameleon.core.Chameleon.start(Chameleon.java:218) [chameleon-core-1.0.9.jar:na]
+	at org.ow2.chameleon.core.Main.main(Main.java:69) [chameleon-core-1.0.9.jar:na]
+22:00:03.642 1861 [main] ERROR o.o.c.c.activators.BundleDeployer - Error during the starting of org.apache.shiro.web
+org.osgi.framework.BundleException: Unresolved constraint in bundle org.apache.shiro.web [62]: Unable to resolve 62.0: missing requirement [62.0] osgi.wiring.package; (osgi.wiring.package=javax.servlet)
+	at org.apache.felix.framework.Felix.resolveBundleRevision(Felix.java:3980) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.Felix.startBundle(Felix.java:2043) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.BundleImpl.start(BundleImpl.java:976) ~[org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.BundleImpl.start(BundleImpl.java:963) ~[org.apache.felix.framework-4.4.0.jar:na]
+	at org.ow2.chameleon.core.activators.BundleDeployer.open(BundleDeployer.java:192) [chameleon-core-1.0.9.jar:na]
+	at org.ow2.chameleon.core.activators.DirectoryMonitor.addingService(DirectoryMonitor.java:238) [chameleon-core-1.0.9.jar:na]
+	at org.ow2.chameleon.core.activators.DirectoryMonitor.addingService(DirectoryMonitor.java:52) [chameleon-core-1.0.9.jar:na]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:932) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:864) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:894) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.util.EventDispatcher.invokeServiceListenerCallback(EventDispatcher.java:943) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.util.EventDispatcher.fireEventImmediately(EventDispatcher.java:794) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.util.EventDispatcher.fireServiceEvent(EventDispatcher.java:544) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.Felix.fireServiceEvent(Felix.java:4425) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.Felix.registerService(Felix.java:3429) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.BundleContextImpl.registerService(BundleContextImpl.java:346) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.BundleContextImpl.registerService(BundleContextImpl.java:352) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.ow2.chameleon.core.activators.BundleDeployer.start(BundleDeployer.java:80) [chameleon-core-1.0.9.jar:na]
+	at org.ow2.chameleon.core.utils.FrameworkManager.start(FrameworkManager.java:108) [chameleon-core-1.0.9.jar:na]
+	at org.ow2.chameleon.core.Chameleon.start(Chameleon.java:218) [chameleon-core-1.0.9.jar:na]
+	at org.ow2.chameleon.core.Main.main(Main.java:69) [chameleon-core-1.0.9.jar:na]
+22:00:03.695 1914 [main] INFO  o.o.c.c.activators.DirectoryMonitor - Opening deployer org.ow2.chameleon.core.activators.ConfigDeployer@61544ae6 for directory /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/runtime.
+22:00:03.695 1914 [main] INFO  o.o.c.c.activators.DirectoryMonitor - Opening deployer org.ow2.chameleon.core.activators.ConfigDeployer@61544ae6 for directory /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application.
+22:00:05.758 3977 [[iPOJO] pool-1-thread-1] INFO  o.w.c.ApplicationConfigurationImpl - Enabling the watching of the configuration file
+22:00:05.760 3979 [[iPOJO] pool-1-thread-1] INFO  o.o.c.c.activators.DirectoryMonitor - Opening deployer org.ow2.chameleon.core.activators.BundleDeployer@78b66d36 for directory /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/conf.
+22:00:05.760 3979 [[iPOJO] pool-1-thread-1] INFO  o.o.c.c.activators.DirectoryMonitor - Opening deployer org.ow2.chameleon.core.activators.ConfigDeployer@61544ae6 for directory /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/conf.
+22:00:05.767 3986 [[iPOJO] pool-1-thread-1] INFO  o.o.c.c.activators.DirectoryMonitor - Opening deployer org.wisdom.configuration.ApplicationConfigurationImpl$ConfigurationDeployer@7ad08883 for directory /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/runtime.
+22:00:05.767 3986 [[iPOJO] pool-1-thread-1] INFO  o.o.c.c.activators.DirectoryMonitor - Opening deployer org.wisdom.configuration.ApplicationConfigurationImpl$ConfigurationDeployer@7ad08883 for directory /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application.
+22:00:05.768 3987 [[iPOJO] pool-1-thread-1] INFO  o.o.c.c.activators.DirectoryMonitor - Opening deployer org.wisdom.configuration.ApplicationConfigurationImpl$ConfigurationDeployer@7ad08883 for directory /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/conf.
+22:00:05.768 3987 [[iPOJO] pool-1-thread-1] INFO  o.w.c.ApplicationConfigurationImpl - Configuration file : /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/conf/application.conf
+22:00:05.768 3987 [[iPOJO] pool-1-thread-1] INFO  o.w.c.ApplicationConfigurationImpl - Base directory : /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom
+22:00:05.769 3988 [[iPOJO] pool-1-thread-1] INFO  o.w.c.ApplicationConfigurationImpl - Wisdom running in DEV
+22:00:05.891 4110 [[iPOJO] pool-1-thread-1] INFO  o.w.c.jackson.JacksonSingleton - Starting JSON and XML support services
+22:00:06.202 4421 [[iPOJO] pool-1-thread-1] INFO  o.w.c.jackson.JacksonSingleton - Adding JSON module Hibernate-Validator-Module
+22:00:06.633 4852 [[iPOJO] pool-1-thread-1] INFO  o.wisdom.resources.WebJarController - Web Jar library (bootstrap-3.1.1[63]) found in org.wisdom.framework.wisdom.monitor [63]
+22:00:06.638 4857 [[iPOJO] pool-1-thread-1] INFO  o.wisdom.resources.WebJarController - Web Jar library (bootswatch-yeti-3.1.1[63]) found in org.wisdom.framework.wisdom.monitor [63]
+22:00:06.642 4861 [[iPOJO] pool-1-thread-1] INFO  o.wisdom.resources.WebJarController - Web Jar library (handlebars-1.3.0[63]) found in org.wisdom.framework.wisdom.monitor [63]
+22:00:06.644 4863 [[iPOJO] pool-1-thread-1] INFO  o.wisdom.resources.WebJarController - Web Jar library (jquery-mousewheel-3.1.9[63]) found in org.wisdom.framework.wisdom.monitor [63]
+22:00:06.646 4865 [[iPOJO] pool-1-thread-1] INFO  o.wisdom.resources.WebJarController - Web Jar library (jquery-2.1.0[63]) found in org.wisdom.framework.wisdom.monitor [63]
+22:00:06.649 4868 [[iPOJO] pool-1-thread-1] INFO  o.wisdom.resources.WebJarController - Web Jar library (momentjs-2.5.1[63]) found in org.wisdom.framework.wisdom.monitor [63]
+22:00:06.653 4872 [[iPOJO] pool-1-thread-1] INFO  o.wisdom.resources.WebJarController - Web Jar library (tablesorter-2.15.5[63]) found in org.wisdom.framework.wisdom.monitor [63]
+22:00:06.659 4878 [[iPOJO] pool-1-thread-1] INFO  o.wisdom.resources.WebJarController - Web Jar library (bootstrap-3.1.1[64]) found in com.agonist.wisdom.shiro [64]
+22:00:06.660 4879 [[iPOJO] pool-1-thread-1] INFO  o.wisdom.resources.WebJarController - Web Jar library (jquery-2.1.0[64]) found in com.agonist.wisdom.shiro [64]
+22:00:06.732 4951 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf configuration: mode=HTML5, ttl=1
+22:00:06.870 5089 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.tracker.TemplateDeployer - Starting thymeleaf template deployer
+22:00:06.870 5089 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.tracker.TemplateDeployer - Template directory set to /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/templates
+22:00:06.873 5092 [[iPOJO] pool-1-thread-1] INFO  o.o.c.c.activators.DirectoryMonitor - Opening deployer org.ow2.chameleon.core.activators.BundleDeployer@78b66d36 for directory /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/templates.
+22:00:06.873 5092 [[iPOJO] pool-1-thread-1] INFO  o.o.c.c.activators.DirectoryMonitor - Opening deployer org.ow2.chameleon.core.activators.ConfigDeployer@61544ae6 for directory /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/templates.
+22:00:06.873 5092 [[iPOJO] pool-1-thread-1] INFO  o.o.c.c.activators.DirectoryMonitor - Opening deployer org.wisdom.configuration.ApplicationConfigurationImpl$ConfigurationDeployer@7ad08883 for directory /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/templates.
+22:00:06.879 5098 [[iPOJO] pool-1-thread-1] INFO  o.o.c.c.activators.DirectoryMonitor - Opening deployer org.wisdom.template.thymeleaf.tracker.TemplateDeployer@481cf4ee for directory /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/runtime.
+22:00:06.880 5099 [[iPOJO] pool-1-thread-1] INFO  o.o.c.c.activators.DirectoryMonitor - Opening deployer org.wisdom.template.thymeleaf.tracker.TemplateDeployer@481cf4ee for directory /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application.
+22:00:06.880 5099 [[iPOJO] pool-1-thread-1] INFO  o.o.c.c.activators.DirectoryMonitor - Opening deployer org.wisdom.template.thymeleaf.tracker.TemplateDeployer@481cf4ee for directory /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/conf.
+22:00:06.881 5100 [[iPOJO] pool-1-thread-1] INFO  o.o.c.c.activators.DirectoryMonitor - Opening deployer org.wisdom.template.thymeleaf.tracker.TemplateDeployer@481cf4ee for directory /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/templates.
+22:00:06.886 5105 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from org.wisdom.resources.AssetController@23740040
+22:00:06.892 5111 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from org.wisdom.resources.WebJarController@55d85c36
+22:00:06.894 5113 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from org.wisdom.i18n.I18nController@272b3d70
+22:00:06.927 5146 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for file:/Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/templates/error/404.thl.html
+22:00:06.939 5158 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for file:/Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/templates/error/500.thl.html
+22:00:06.949 5168 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for file:/Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/templates/error/pipeline.thl.html
+22:00:06.958 5177 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.tracker.TemplateTracker - Starting Thymeleaf template tracker
+22:00:07.023 5242 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from org.wisdom.resources.AssetsSingleton@4e81bde
+22:00:07.027 5246 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://48.0:0/templates/assets/list.thl.html
+22:00:07.045 5264 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://63.0:0/templates/monitor/bundles.thl.html
+22:00:07.051 5270 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://63.0:0/templates/monitor/controllers.thl.html
+22:00:07.057 5276 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://63.0:0/templates/monitor/dashboard.thl.html
+22:00:07.065 5284 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://63.0:0/templates/monitor/ipojo.thl.html
+22:00:07.072 5291 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://63.0:0/templates/monitor/layout.thl.html
+22:00:07.081 5300 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://63.0:0/templates/monitor/loggers.thl.html
+22:00:07.091 5310 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://63.0:0/templates/monitor/login.thl.html
+22:00:07.097 5316 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://63.0:0/templates/monitor/routes.thl.html
+22:00:07.103 5322 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://63.0:0/templates/monitor/services.thl.html
+22:00:07.108 5327 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://63.0:0/templates/monitor/terminal.thl.html
+22:00:07.113 5332 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://63.0:0/templates/monitor/tiles.thl.html
+22:00:07.117 5336 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.0:0/templates/login.thl.html
+22:00:07.124 5343 [[iPOJO] pool-1-thread-1] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.0:0/templates/welcome.thl.html
+22:00:07.173 5392 [Thread-19] INFO  wisdom-engine - Starting Wisdom server
+22:00:07.228 5447 [Thread-19] INFO  i.n.util.internal.PlatformDependent - Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+22:00:07.248 5467 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from controllers.Documentation@3114240a
+22:00:07.317 5536 [[iPOJO] pool-1-thread-1] INFO  o.w.m.e.d.DashboardExtension - Registering JVM metrics
+22:00:07.343 5562 [Thread-19] INFO  wisdom-engine - Wisdom is going to serve HTTP requests on port 9000
+22:00:07.429 5648 [[iPOJO] pool-1-thread-1] INFO  o.w.m.e.d.DashboardExtension - Registering HTTP metrics
+22:00:07.442 5661 [[iPOJO] pool-1-thread-1] INFO  o.w.m.e.d.DashboardExtension - Initializing Metrics JMX reporting
+22:00:07.476 5695 [[iPOJO] pool-1-thread-1] INFO  o.w.c.jackson.JacksonSingleton - Adding JSON module org.wisdom.monitor.service.MonitorExtension
+22:00:07.771 5990 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from org.wisdom.monitor.MonitorCenter@60d560ae
+22:00:07.784 6003 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from org.wisdom.monitor.extensions.dashboard.DashboardExtension@5c3821bf
+22:00:07.809 6028 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from org.wisdom.monitor.extensions.ipojo.IPOJOController@7556e41b
+22:00:07.827 6046 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from org.wisdom.monitor.extensions.logger.LoggerExtension@18a94cb9
+22:00:07.847 6066 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from org.wisdom.monitor.extensions.osgi.BundleMonitorExtension@c7ba3f7
+22:00:07.864 6083 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from org.wisdom.monitor.extensions.osgi.ServiceMonitorExtension@26b66e3c
+22:00:07.900 6119 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from org.wisdom.monitor.extensions.terminal.WisitShellController@4e1ebfb0
+22:00:07.928 6147 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from org.wisdom.monitor.extensions.wisdom.ControllerExtension@62fb6b
+22:00:07.948 6167 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from org.wisdom.monitor.extensions.wisdom.RouterExtension@63a93fa2
+22:00:07.963 6182 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.WelcomeController@7dac6cce
+22:01:04.526 62745 [nioEventLoopGroup-3-3] WARN  o.wisdom.resources.WebJarController - 2 WebJars provide 'jquery.min.js' - returning the one from jquery-2.1.0
+22:01:04.528 62747 [nioEventLoopGroup-3-4] WARN  o.wisdom.resources.WebJarController - 3 WebJars provide 'js/bootstrap.min.js' - returning the one from bootstrap-3.1.1
+22:01:04.530 62749 [nioEventLoopGroup-3-1] WARN  o.wisdom.resources.WebJarController - 3 WebJars provide 'css/bootstrap.css' - returning the one from bootstrap-3.1.1
+22:01:46.752 104971 [monitor-application] INFO  o.o.c.c.activators.DirectoryMonitor - File /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar from /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application changed
+22:01:46.753 104972 [monitor-application] INFO  o.o.c.c.activators.BundleDeployer - Updating bundle com.agonist.wisdom.shiro - /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar
+22:01:46.768 104987 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.WelcomeController@7dac6cce
+22:01:46.788 105007 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.0:0/templates/login.thl.html from com.agonist.wisdom.shiro
+22:01:46.792 105011 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.0:0/templates/welcome.thl.html from com.agonist.wisdom.shiro
+22:01:46.817 105036 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (bootstrap-3.1.1[64]) found in com.agonist.wisdom.shiro [64]
+22:01:46.820 105039 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (jquery-2.1.0[64]) found in com.agonist.wisdom.shiro [64]
+22:01:46.827 105046 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.1:0/templates/login.thl.html
+22:01:46.832 105051 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.1:0/templates/welcome.thl.html
+22:01:46.894 105113 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.LoginController@1fa9a56e
+22:01:46.908 105127 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.WelcomeController@7a866982
+22:02:50.840 169059 [nioEventLoopGroup-3-3] ERROR o.t.templateparser.ErrorHandler - [THYMELEAF][nioEventLoopGroup-3-3] Fatal error during parsing
+org.xml.sax.SAXParseException: Attribute name "required" associated with an element type "input" must be followed by the ' = ' character.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanAttribute(XMLDocumentFragmentScannerImpl.java:1530) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1319) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2786) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:333) [na:1.8.0_11]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.doParse(AbstractNonValidatingSAXTemplateParser.java:210) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplateUsingPool(AbstractNonValidatingSAXTemplateParser.java:134) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplate(AbstractNonValidatingSAXTemplateParser.java:117) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateRepository.getTemplate(TemplateRepository.java:277) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1104) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1060) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1011) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:955) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.wisdom.template.thymeleaf.impl.WisdomTemplateEngine.process(WisdomTemplateEngine.java:88) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.wisdom.template.thymeleaf.impl.ThymeLeafTemplateImplementation.render(ThymeLeafTemplateImplementation.java:124) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.wisdom.api.templates.Template$$Proxy.render(Unknown Source) [na:na]
+	at org.wisdom.api.DefaultController.render(DefaultController.java:188) [wisdom-api-0.6.1.jar:na]
+	at sample.LoginController.__M_loginForm(LoginController.java:46) [wisdom-shiro-1.0-SNAPSHOT.jar:na]
+	at sample.LoginController.loginForm(LoginController.java) [wisdom-shiro-1.0-SNAPSHOT.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_11]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_11]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_11]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_11]
+	at org.wisdom.api.interception.RequestContext$ActionInvoker.call(RequestContext.java:163) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.error.DefaultPageErrorHandler.__M_call(DefaultPageErrorHandler.java:236) [default-error-handler-0.6.1.jar:na]
+	at org.wisdom.error.DefaultPageErrorHandler.call(DefaultPageErrorHandler.java) [default-error-handler-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.monitor.extensions.dashboard.HttpMetricFilter.call(HttpMetricFilter.java:126) [wisdom-monitor-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.router.RouteDelegate.invoke(RouteDelegate.java:209) [router-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.invoke(WisdomHandler.java:624) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.dispatch(WisdomHandler.java:323) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.handleHttpRequest(WisdomHandler.java:215) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.channelRead0(WisdomHandler.java:127) [wisdom-engine-0.6.1.jar:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:103) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:163) [netty-codec-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:785) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:126) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:507) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:464) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:378) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:350) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) [netty-common-4.0.19.Final.jar:4.0.19.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_11]
+22:02:50.842 169061 [nioEventLoopGroup-3-3] ERROR org.thymeleaf.TemplateEngine - [THYMELEAF][nioEventLoopGroup-3-3] Exception processing template "bundle://64.1:0/templates/login.thl.html": Exception parsing document: template="bundle://64.1:0/templates/login.thl.html", line 18 - column 87
+22:02:50.847 169066 [nioEventLoopGroup-3-3] ERROR wisdom-error - An exception occurred while processing request GET /login
+org.thymeleaf.exceptions.TemplateInputException: Exception parsing document: template="bundle://64.1:0/templates/login.thl.html", line 18 - column 87
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplateUsingPool(AbstractNonValidatingSAXTemplateParser.java:167) ~[na:na]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplate(AbstractNonValidatingSAXTemplateParser.java:117) ~[na:na]
+	at org.thymeleaf.TemplateRepository.getTemplate(TemplateRepository.java:277) ~[na:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1104) ~[na:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1060) ~[na:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1011) ~[na:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:955) ~[na:na]
+	at org.wisdom.template.thymeleaf.impl.WisdomTemplateEngine.process(WisdomTemplateEngine.java:88) ~[na:na]
+	at org.wisdom.template.thymeleaf.impl.ThymeLeafTemplateImplementation.render(ThymeLeafTemplateImplementation.java:124) ~[na:na]
+	at org.wisdom.api.templates.Template$$Proxy.render(Unknown Source) ~[na:na]
+	at org.wisdom.api.DefaultController.render(DefaultController.java:188) ~[wisdom-api-0.6.1.jar:na]
+	at sample.LoginController.__M_loginForm(LoginController.java:46) ~[na:na]
+	at sample.LoginController.loginForm(LoginController.java) ~[na:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_11]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_11]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_11]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_11]
+	at org.wisdom.api.interception.RequestContext$ActionInvoker.call(RequestContext.java:163) ~[wisdom-api-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.error.DefaultPageErrorHandler.__M_call(DefaultPageErrorHandler.java:236) [default-error-handler-0.6.1.jar:na]
+	at org.wisdom.error.DefaultPageErrorHandler.call(DefaultPageErrorHandler.java) [default-error-handler-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.monitor.extensions.dashboard.HttpMetricFilter.call(HttpMetricFilter.java:126) [wisdom-monitor-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.router.RouteDelegate.invoke(RouteDelegate.java:209) [router-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.invoke(WisdomHandler.java:624) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.dispatch(WisdomHandler.java:323) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.handleHttpRequest(WisdomHandler.java:215) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.channelRead0(WisdomHandler.java:127) [wisdom-engine-0.6.1.jar:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:103) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:163) [netty-codec-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:785) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:126) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:507) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:464) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:378) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:350) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) [netty-common-4.0.19.Final.jar:4.0.19.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_11]
+Caused by: org.xml.sax.SAXParseException: Attribute name "required" associated with an element type "input" must be followed by the ' = ' character.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanAttribute(XMLDocumentFragmentScannerImpl.java:1530) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1319) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2786) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:333) ~[na:1.8.0_11]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.doParse(AbstractNonValidatingSAXTemplateParser.java:210) ~[na:na]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplateUsingPool(AbstractNonValidatingSAXTemplateParser.java:134) ~[na:na]
+	... 45 common frames omitted
+22:03:08.883 187102 [monitor-application] INFO  o.o.c.c.activators.DirectoryMonitor - File /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar from /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application changed
+22:03:08.884 187103 [monitor-application] INFO  o.o.c.c.activators.BundleDeployer - Updating bundle com.agonist.wisdom.shiro - /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar
+22:03:08.905 187124 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.LoginController@1fa9a56e
+22:03:08.926 187145 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.WelcomeController@7a866982
+22:03:08.952 187171 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.1:0/templates/login.thl.html from com.agonist.wisdom.shiro
+22:03:08.957 187176 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.1:0/templates/welcome.thl.html from com.agonist.wisdom.shiro
+22:03:08.996 187215 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (bootstrap-3.1.1[64]) found in com.agonist.wisdom.shiro [64]
+22:03:09.001 187220 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (jquery-2.1.0[64]) found in com.agonist.wisdom.shiro [64]
+22:03:09.012 187231 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.2:0/templates/login.thl.html
+22:03:09.018 187237 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.2:0/templates/welcome.thl.html
+22:03:09.023 187242 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.LoginController@218a164a
+22:03:09.036 187255 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.WelcomeController@10e5fac5
+22:03:16.050 194269 [nioEventLoopGroup-3-3] ERROR o.t.templateparser.ErrorHandler - [THYMELEAF][nioEventLoopGroup-3-3] Fatal error during parsing
+org.xml.sax.SAXParseException: Attribute name "required" associated with an element type "input" must be followed by the ' = ' character.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanAttribute(XMLDocumentFragmentScannerImpl.java:1530) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1319) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2786) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:333) [na:1.8.0_11]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.doParse(AbstractNonValidatingSAXTemplateParser.java:210) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplateUsingPool(AbstractNonValidatingSAXTemplateParser.java:134) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplate(AbstractNonValidatingSAXTemplateParser.java:117) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateRepository.getTemplate(TemplateRepository.java:277) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1104) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1060) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1011) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:955) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.wisdom.template.thymeleaf.impl.WisdomTemplateEngine.process(WisdomTemplateEngine.java:88) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.wisdom.template.thymeleaf.impl.ThymeLeafTemplateImplementation.render(ThymeLeafTemplateImplementation.java:124) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.wisdom.api.templates.Template$$Proxy.render(Unknown Source) [na:na]
+	at org.wisdom.api.DefaultController.render(DefaultController.java:188) [wisdom-api-0.6.1.jar:na]
+	at sample.LoginController.__M_loginForm(LoginController.java:46) [wisdom-shiro-1.0-SNAPSHOT.jar:na]
+	at sample.LoginController.loginForm(LoginController.java) [wisdom-shiro-1.0-SNAPSHOT.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_11]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_11]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_11]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_11]
+	at org.wisdom.api.interception.RequestContext$ActionInvoker.call(RequestContext.java:163) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.error.DefaultPageErrorHandler.__M_call(DefaultPageErrorHandler.java:236) [default-error-handler-0.6.1.jar:na]
+	at org.wisdom.error.DefaultPageErrorHandler.call(DefaultPageErrorHandler.java) [default-error-handler-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.monitor.extensions.dashboard.HttpMetricFilter.call(HttpMetricFilter.java:126) [wisdom-monitor-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.router.RouteDelegate.invoke(RouteDelegate.java:209) [router-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.invoke(WisdomHandler.java:624) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.dispatch(WisdomHandler.java:323) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.handleHttpRequest(WisdomHandler.java:215) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.channelRead0(WisdomHandler.java:127) [wisdom-engine-0.6.1.jar:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:103) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:163) [netty-codec-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:785) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:126) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:507) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:464) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:378) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:350) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) [netty-common-4.0.19.Final.jar:4.0.19.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_11]
+22:03:16.052 194271 [nioEventLoopGroup-3-3] ERROR org.thymeleaf.TemplateEngine - [THYMELEAF][nioEventLoopGroup-3-3] Exception processing template "bundle://64.2:0/templates/login.thl.html": Exception parsing document: template="bundle://64.2:0/templates/login.thl.html", line 18 - column 87
+22:03:16.057 194276 [nioEventLoopGroup-3-3] ERROR wisdom-error - An exception occurred while processing request GET /login
+org.thymeleaf.exceptions.TemplateInputException: Exception parsing document: template="bundle://64.2:0/templates/login.thl.html", line 18 - column 87
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplateUsingPool(AbstractNonValidatingSAXTemplateParser.java:167) ~[na:na]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplate(AbstractNonValidatingSAXTemplateParser.java:117) ~[na:na]
+	at org.thymeleaf.TemplateRepository.getTemplate(TemplateRepository.java:277) ~[na:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1104) ~[na:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1060) ~[na:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1011) ~[na:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:955) ~[na:na]
+	at org.wisdom.template.thymeleaf.impl.WisdomTemplateEngine.process(WisdomTemplateEngine.java:88) ~[na:na]
+	at org.wisdom.template.thymeleaf.impl.ThymeLeafTemplateImplementation.render(ThymeLeafTemplateImplementation.java:124) ~[na:na]
+	at org.wisdom.api.templates.Template$$Proxy.render(Unknown Source) ~[na:na]
+	at org.wisdom.api.DefaultController.render(DefaultController.java:188) ~[wisdom-api-0.6.1.jar:na]
+	at sample.LoginController.__M_loginForm(LoginController.java:46) ~[na:na]
+	at sample.LoginController.loginForm(LoginController.java) ~[na:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_11]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_11]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_11]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_11]
+	at org.wisdom.api.interception.RequestContext$ActionInvoker.call(RequestContext.java:163) ~[wisdom-api-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.error.DefaultPageErrorHandler.__M_call(DefaultPageErrorHandler.java:236) [default-error-handler-0.6.1.jar:na]
+	at org.wisdom.error.DefaultPageErrorHandler.call(DefaultPageErrorHandler.java) [default-error-handler-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.monitor.extensions.dashboard.HttpMetricFilter.call(HttpMetricFilter.java:126) [wisdom-monitor-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.router.RouteDelegate.invoke(RouteDelegate.java:209) [router-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.invoke(WisdomHandler.java:624) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.dispatch(WisdomHandler.java:323) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.handleHttpRequest(WisdomHandler.java:215) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.channelRead0(WisdomHandler.java:127) [wisdom-engine-0.6.1.jar:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:103) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:163) [netty-codec-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:785) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:126) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:507) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:464) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:378) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:350) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) [netty-common-4.0.19.Final.jar:4.0.19.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_11]
+Caused by: org.xml.sax.SAXParseException: Attribute name "required" associated with an element type "input" must be followed by the ' = ' character.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanAttribute(XMLDocumentFragmentScannerImpl.java:1530) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1319) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2786) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:333) ~[na:1.8.0_11]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.doParse(AbstractNonValidatingSAXTemplateParser.java:210) ~[na:na]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplateUsingPool(AbstractNonValidatingSAXTemplateParser.java:134) ~[na:na]
+	... 45 common frames omitted
+22:03:20.095 198314 [nioEventLoopGroup-3-3] ERROR o.t.templateparser.ErrorHandler - [THYMELEAF][nioEventLoopGroup-3-3] Fatal error during parsing
+org.xml.sax.SAXParseException: Attribute name "required" associated with an element type "input" must be followed by the ' = ' character.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanAttribute(XMLDocumentFragmentScannerImpl.java:1530) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1319) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2786) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:333) [na:1.8.0_11]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.doParse(AbstractNonValidatingSAXTemplateParser.java:210) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplateUsingPool(AbstractNonValidatingSAXTemplateParser.java:134) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplate(AbstractNonValidatingSAXTemplateParser.java:117) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateRepository.getTemplate(TemplateRepository.java:277) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1104) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1060) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1011) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:955) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.wisdom.template.thymeleaf.impl.WisdomTemplateEngine.process(WisdomTemplateEngine.java:88) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.wisdom.template.thymeleaf.impl.ThymeLeafTemplateImplementation.render(ThymeLeafTemplateImplementation.java:124) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.wisdom.api.templates.Template$$Proxy.render(Unknown Source) [na:na]
+	at org.wisdom.api.DefaultController.render(DefaultController.java:188) [wisdom-api-0.6.1.jar:na]
+	at sample.LoginController.__M_loginForm(LoginController.java:46) [wisdom-shiro-1.0-SNAPSHOT.jar:na]
+	at sample.LoginController.loginForm(LoginController.java) [wisdom-shiro-1.0-SNAPSHOT.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_11]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_11]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_11]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_11]
+	at org.wisdom.api.interception.RequestContext$ActionInvoker.call(RequestContext.java:163) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.error.DefaultPageErrorHandler.__M_call(DefaultPageErrorHandler.java:236) [default-error-handler-0.6.1.jar:na]
+	at org.wisdom.error.DefaultPageErrorHandler.call(DefaultPageErrorHandler.java) [default-error-handler-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.monitor.extensions.dashboard.HttpMetricFilter.call(HttpMetricFilter.java:126) [wisdom-monitor-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.router.RouteDelegate.invoke(RouteDelegate.java:209) [router-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.invoke(WisdomHandler.java:624) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.dispatch(WisdomHandler.java:323) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.handleHttpRequest(WisdomHandler.java:215) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.channelRead0(WisdomHandler.java:127) [wisdom-engine-0.6.1.jar:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:103) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:163) [netty-codec-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:785) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:126) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:507) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:464) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:378) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:350) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) [netty-common-4.0.19.Final.jar:4.0.19.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_11]
+22:03:20.096 198315 [nioEventLoopGroup-3-3] ERROR org.thymeleaf.TemplateEngine - [THYMELEAF][nioEventLoopGroup-3-3] Exception processing template "bundle://64.2:0/templates/login.thl.html": Exception parsing document: template="bundle://64.2:0/templates/login.thl.html", line 18 - column 87
+22:03:20.102 198321 [nioEventLoopGroup-3-3] ERROR wisdom-error - An exception occurred while processing request GET /login
+org.thymeleaf.exceptions.TemplateInputException: Exception parsing document: template="bundle://64.2:0/templates/login.thl.html", line 18 - column 87
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplateUsingPool(AbstractNonValidatingSAXTemplateParser.java:167) ~[na:na]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplate(AbstractNonValidatingSAXTemplateParser.java:117) ~[na:na]
+	at org.thymeleaf.TemplateRepository.getTemplate(TemplateRepository.java:277) ~[na:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1104) ~[na:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1060) ~[na:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1011) ~[na:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:955) ~[na:na]
+	at org.wisdom.template.thymeleaf.impl.WisdomTemplateEngine.process(WisdomTemplateEngine.java:88) ~[na:na]
+	at org.wisdom.template.thymeleaf.impl.ThymeLeafTemplateImplementation.render(ThymeLeafTemplateImplementation.java:124) ~[na:na]
+	at org.wisdom.api.templates.Template$$Proxy.render(Unknown Source) ~[na:na]
+	at org.wisdom.api.DefaultController.render(DefaultController.java:188) ~[wisdom-api-0.6.1.jar:na]
+	at sample.LoginController.__M_loginForm(LoginController.java:46) ~[na:na]
+	at sample.LoginController.loginForm(LoginController.java) ~[na:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_11]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_11]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_11]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_11]
+	at org.wisdom.api.interception.RequestContext$ActionInvoker.call(RequestContext.java:163) ~[wisdom-api-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.error.DefaultPageErrorHandler.__M_call(DefaultPageErrorHandler.java:236) [default-error-handler-0.6.1.jar:na]
+	at org.wisdom.error.DefaultPageErrorHandler.call(DefaultPageErrorHandler.java) [default-error-handler-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.monitor.extensions.dashboard.HttpMetricFilter.call(HttpMetricFilter.java:126) [wisdom-monitor-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.router.RouteDelegate.invoke(RouteDelegate.java:209) [router-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.invoke(WisdomHandler.java:624) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.dispatch(WisdomHandler.java:323) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.handleHttpRequest(WisdomHandler.java:215) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.channelRead0(WisdomHandler.java:127) [wisdom-engine-0.6.1.jar:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:103) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:163) [netty-codec-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:785) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:126) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:507) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:464) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:378) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:350) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) [netty-common-4.0.19.Final.jar:4.0.19.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_11]
+Caused by: org.xml.sax.SAXParseException: Attribute name "required" associated with an element type "input" must be followed by the ' = ' character.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanAttribute(XMLDocumentFragmentScannerImpl.java:1530) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1319) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2786) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:333) ~[na:1.8.0_11]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.doParse(AbstractNonValidatingSAXTemplateParser.java:210) ~[na:na]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplateUsingPool(AbstractNonValidatingSAXTemplateParser.java:134) ~[na:na]
+	... 45 common frames omitted
+22:03:59.051 237270 [monitor-application] INFO  o.o.c.c.activators.DirectoryMonitor - File /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar from /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application changed
+22:03:59.052 237271 [monitor-application] INFO  o.o.c.c.activators.BundleDeployer - Updating bundle com.agonist.wisdom.shiro - /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar
+22:03:59.061 237280 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.LoginController@218a164a
+22:03:59.071 237290 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.WelcomeController@10e5fac5
+22:03:59.089 237308 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.2:0/templates/login.thl.html from com.agonist.wisdom.shiro
+22:03:59.092 237311 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.2:0/templates/welcome.thl.html from com.agonist.wisdom.shiro
+22:03:59.108 237327 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (bootstrap-3.1.1[64]) found in com.agonist.wisdom.shiro [64]
+22:03:59.110 237329 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (jquery-2.1.0[64]) found in com.agonist.wisdom.shiro [64]
+22:03:59.124 237343 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.3:0/templates/login.thl.html
+22:03:59.129 237348 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.3:0/templates/welcome.thl.html
+22:03:59.151 237370 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.LoginController@6374ae42
+22:03:59.162 237381 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.WelcomeController@79f0f0b1
+22:04:16.417 254636 [nioEventLoopGroup-3-3] ERROR o.t.templateparser.ErrorHandler - [THYMELEAF][nioEventLoopGroup-3-3] Fatal error during parsing
+org.xml.sax.SAXParseException: Attribute name "required" associated with an element type "input" must be followed by the ' = ' character.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanAttribute(XMLDocumentFragmentScannerImpl.java:1530) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1319) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2786) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649) [na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:333) [na:1.8.0_11]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.doParse(AbstractNonValidatingSAXTemplateParser.java:210) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplateUsingPool(AbstractNonValidatingSAXTemplateParser.java:134) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplate(AbstractNonValidatingSAXTemplateParser.java:117) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateRepository.getTemplate(TemplateRepository.java:277) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1104) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1060) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1011) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:955) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.wisdom.template.thymeleaf.impl.WisdomTemplateEngine.process(WisdomTemplateEngine.java:88) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.wisdom.template.thymeleaf.impl.ThymeLeafTemplateImplementation.render(ThymeLeafTemplateImplementation.java:124) [thymeleaf-template-engine-0.6.1.jar:na]
+	at org.wisdom.api.templates.Template$$Proxy.render(Unknown Source) [na:na]
+	at org.wisdom.api.DefaultController.render(DefaultController.java:188) [wisdom-api-0.6.1.jar:na]
+	at sample.LoginController.__M_loginForm(LoginController.java:46) [wisdom-shiro-1.0-SNAPSHOT.jar:na]
+	at sample.LoginController.loginForm(LoginController.java) [wisdom-shiro-1.0-SNAPSHOT.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_11]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_11]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_11]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_11]
+	at org.wisdom.api.interception.RequestContext$ActionInvoker.call(RequestContext.java:163) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.error.DefaultPageErrorHandler.__M_call(DefaultPageErrorHandler.java:236) [default-error-handler-0.6.1.jar:na]
+	at org.wisdom.error.DefaultPageErrorHandler.call(DefaultPageErrorHandler.java) [default-error-handler-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.monitor.extensions.dashboard.HttpMetricFilter.call(HttpMetricFilter.java:126) [wisdom-monitor-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.router.RouteDelegate.invoke(RouteDelegate.java:209) [router-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.invoke(WisdomHandler.java:624) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.dispatch(WisdomHandler.java:323) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.handleHttpRequest(WisdomHandler.java:215) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.channelRead0(WisdomHandler.java:127) [wisdom-engine-0.6.1.jar:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:103) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:163) [netty-codec-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:785) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:126) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:507) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:464) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:378) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:350) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) [netty-common-4.0.19.Final.jar:4.0.19.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_11]
+22:04:16.418 254637 [nioEventLoopGroup-3-3] ERROR org.thymeleaf.TemplateEngine - [THYMELEAF][nioEventLoopGroup-3-3] Exception processing template "bundle://64.3:0/templates/login.thl.html": Exception parsing document: template="bundle://64.3:0/templates/login.thl.html", line 18 - column 99
+22:04:16.424 254643 [nioEventLoopGroup-3-3] ERROR wisdom-error - An exception occurred while processing request GET /login
+org.thymeleaf.exceptions.TemplateInputException: Exception parsing document: template="bundle://64.3:0/templates/login.thl.html", line 18 - column 99
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplateUsingPool(AbstractNonValidatingSAXTemplateParser.java:167) ~[na:na]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplate(AbstractNonValidatingSAXTemplateParser.java:117) ~[na:na]
+	at org.thymeleaf.TemplateRepository.getTemplate(TemplateRepository.java:277) ~[na:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1104) ~[na:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1060) ~[na:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1011) ~[na:na]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:955) ~[na:na]
+	at org.wisdom.template.thymeleaf.impl.WisdomTemplateEngine.process(WisdomTemplateEngine.java:88) ~[na:na]
+	at org.wisdom.template.thymeleaf.impl.ThymeLeafTemplateImplementation.render(ThymeLeafTemplateImplementation.java:124) ~[na:na]
+	at org.wisdom.api.templates.Template$$Proxy.render(Unknown Source) ~[na:na]
+	at org.wisdom.api.DefaultController.render(DefaultController.java:188) ~[wisdom-api-0.6.1.jar:na]
+	at sample.LoginController.__M_loginForm(LoginController.java:46) ~[na:na]
+	at sample.LoginController.loginForm(LoginController.java) ~[na:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_11]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_11]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_11]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_11]
+	at org.wisdom.api.interception.RequestContext$ActionInvoker.call(RequestContext.java:163) ~[wisdom-api-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.error.DefaultPageErrorHandler.__M_call(DefaultPageErrorHandler.java:236) [default-error-handler-0.6.1.jar:na]
+	at org.wisdom.error.DefaultPageErrorHandler.call(DefaultPageErrorHandler.java) [default-error-handler-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.monitor.extensions.dashboard.HttpMetricFilter.call(HttpMetricFilter.java:126) [wisdom-monitor-0.6.1.jar:na]
+	at org.wisdom.api.interception.RequestContext.proceed(RequestContext.java:107) [wisdom-api-0.6.1.jar:na]
+	at org.wisdom.router.RouteDelegate.invoke(RouteDelegate.java:209) [router-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.invoke(WisdomHandler.java:624) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.dispatch(WisdomHandler.java:323) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.handleHttpRequest(WisdomHandler.java:215) [wisdom-engine-0.6.1.jar:na]
+	at org.wisdom.engine.server.WisdomHandler.channelRead0(WisdomHandler.java:127) [wisdom-engine-0.6.1.jar:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:103) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:163) [netty-codec-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:341) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:327) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:785) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:126) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:507) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:464) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:378) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:350) [netty-transport-4.0.19.Final.jar:4.0.19.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) [netty-common-4.0.19.Final.jar:4.0.19.Final]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_11]
+Caused by: org.xml.sax.SAXParseException: Attribute name "required" associated with an element type "input" must be followed by the ' = ' character.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanAttribute(XMLDocumentFragmentScannerImpl.java:1530) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1319) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2786) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649) ~[na:1.8.0_11]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:333) ~[na:1.8.0_11]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.doParse(AbstractNonValidatingSAXTemplateParser.java:210) ~[na:na]
+	at org.thymeleaf.templateparser.xmlsax.AbstractNonValidatingSAXTemplateParser.parseTemplateUsingPool(AbstractNonValidatingSAXTemplateParser.java:134) ~[na:na]
+	... 45 common frames omitted
+22:04:27.146 265365 [monitor-application] INFO  o.o.c.c.activators.DirectoryMonitor - File /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar from /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application changed
+22:04:27.147 265366 [monitor-application] INFO  o.o.c.c.activators.BundleDeployer - Updating bundle com.agonist.wisdom.shiro - /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar
+22:04:27.153 265372 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.LoginController@6374ae42
+22:04:27.163 265382 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.WelcomeController@79f0f0b1
+22:04:27.180 265399 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.3:0/templates/login.thl.html from com.agonist.wisdom.shiro
+22:04:27.183 265402 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.3:0/templates/welcome.thl.html from com.agonist.wisdom.shiro
+22:04:27.200 265419 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (bootstrap-3.1.1[64]) found in com.agonist.wisdom.shiro [64]
+22:04:27.202 265421 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (jquery-2.1.0[64]) found in com.agonist.wisdom.shiro [64]
+22:04:27.228 265447 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.4:0/templates/login.thl.html
+22:04:27.246 265465 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.4:0/templates/welcome.thl.html
+22:04:27.251 265470 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.LoginController@39cb364b
+22:04:27.266 265485 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.WelcomeController@58963fef
+22:11:43.530 701749 [monitor-application] INFO  o.o.c.c.activators.DirectoryMonitor - File /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar from /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application changed
+22:11:43.530 701749 [monitor-application] INFO  o.o.c.c.activators.BundleDeployer - Updating bundle com.agonist.wisdom.shiro - /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar
+22:11:43.543 701762 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.LoginController@39cb364b
+22:11:43.558 701777 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.WelcomeController@58963fef
+22:11:43.589 701808 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.4:0/templates/login.thl.html from com.agonist.wisdom.shiro
+22:11:43.594 701813 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.4:0/templates/welcome.thl.html from com.agonist.wisdom.shiro
+22:11:43.610 701829 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (bootstrap-3.1.1[64]) found in com.agonist.wisdom.shiro [64]
+22:11:43.612 701831 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (jquery-2.1.0[64]) found in com.agonist.wisdom.shiro [64]
+22:11:43.617 701836 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.5:0/templates/login.thl.html
+22:11:43.641 701860 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.5:0/templates/welcome.thl.html
+22:11:43.649 701868 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.LoginController@14cfb058
+22:11:43.662 701881 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.WelcomeController@721df322
+22:14:17.740 855959 [monitor-application] INFO  o.o.c.c.activators.DirectoryMonitor - File /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar from /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application changed
+22:14:17.741 855960 [monitor-application] INFO  o.o.c.c.activators.BundleDeployer - Updating bundle com.agonist.wisdom.shiro - /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar
+22:14:17.746 855965 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.LoginController@14cfb058
+22:14:17.756 855975 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.WelcomeController@721df322
+22:14:17.780 855999 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.5:0/templates/login.thl.html from com.agonist.wisdom.shiro
+22:14:17.783 856002 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.5:0/templates/welcome.thl.html from com.agonist.wisdom.shiro
+22:14:17.797 856016 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (bootstrap-3.1.1[64]) found in com.agonist.wisdom.shiro [64]
+22:14:17.798 856017 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (jquery-2.1.0[64]) found in com.agonist.wisdom.shiro [64]
+22:14:17.801 856020 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.6:0/templates/login.thl.html
+22:14:17.803 856022 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.6:0/templates/welcome.thl.html
+22:14:17.826 856045 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.LoginController@5215d04a
+22:14:17.836 856055 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.WelcomeController@48ed2d20
+22:17:03.903 1022122 [monitor-application] INFO  o.o.c.c.activators.DirectoryMonitor - File /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar from /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application changed
+22:17:03.904 1022123 [monitor-application] INFO  o.o.c.c.activators.BundleDeployer - Updating bundle com.agonist.wisdom.shiro - /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar
+22:17:03.915 1022134 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.LoginController@5215d04a
+22:17:03.925 1022144 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.WelcomeController@48ed2d20
+22:17:03.939 1022158 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.6:0/templates/login.thl.html from com.agonist.wisdom.shiro
+22:17:03.942 1022161 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.6:0/templates/welcome.thl.html from com.agonist.wisdom.shiro
+22:17:03.960 1022179 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (bootstrap-3.1.1[64]) found in com.agonist.wisdom.shiro [64]
+22:17:03.968 1022187 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (jquery-2.1.0[64]) found in com.agonist.wisdom.shiro [64]
+22:17:03.973 1022192 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.7:0/templates/login.thl.html
+22:17:03.976 1022195 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.7:0/templates/welcome.thl.html
+22:17:03.987 1022206 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.LoginController@6c3c14e2
+22:17:03.996 1022215 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.WelcomeController@654d8cec
+22:18:38.035 1116254 [monitor-application] INFO  o.o.c.c.activators.DirectoryMonitor - File /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar from /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application changed
+22:18:38.036 1116255 [monitor-application] INFO  o.o.c.c.activators.BundleDeployer - Updating bundle com.agonist.wisdom.shiro - /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar
+22:18:38.046 1116265 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.LoginController@6c3c14e2
+22:18:38.058 1116277 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.WelcomeController@654d8cec
+22:18:38.070 1116289 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.7:0/templates/login.thl.html from com.agonist.wisdom.shiro
+22:18:38.073 1116292 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.7:0/templates/welcome.thl.html from com.agonist.wisdom.shiro
+22:18:38.088 1116307 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (bootstrap-3.1.1[64]) found in com.agonist.wisdom.shiro [64]
+22:18:38.089 1116308 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (jquery-2.1.0[64]) found in com.agonist.wisdom.shiro [64]
+22:18:38.096 1116315 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.8:0/templates/login.thl.html
+22:18:38.103 1116322 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.8:0/templates/welcome.thl.html
+22:18:38.118 1116337 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.LoginController@64314600
+22:18:38.128 1116347 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.WelcomeController@6784edc9
+22:18:42.108 1120327 [monitor-application] INFO  o.o.c.c.activators.DirectoryMonitor - File /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar from /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application changed
+22:18:42.108 1120327 [monitor-application] INFO  o.o.c.c.activators.BundleDeployer - Updating bundle com.agonist.wisdom.shiro - /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar
+22:18:42.117 1120336 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.LoginController@64314600
+22:18:42.128 1120347 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.WelcomeController@6784edc9
+22:18:42.144 1120363 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.8:0/templates/login.thl.html from com.agonist.wisdom.shiro
+22:18:42.147 1120366 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.8:0/templates/welcome.thl.html from com.agonist.wisdom.shiro
+22:18:42.164 1120383 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (bootstrap-3.1.1[64]) found in com.agonist.wisdom.shiro [64]
+22:18:42.166 1120385 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (jquery-2.1.0[64]) found in com.agonist.wisdom.shiro [64]
+22:18:42.171 1120390 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.9:0/templates/login.thl.html
+22:18:42.175 1120394 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.9:0/templates/welcome.thl.html
+22:18:42.201 1120420 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.LoginController@f18f80
+22:18:42.212 1120431 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.WelcomeController@2d0338f9
+22:21:20.263 1278482 [monitor-application] INFO  o.o.c.c.activators.DirectoryMonitor - File /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar from /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application changed
+22:21:20.263 1278482 [monitor-application] INFO  o.o.c.c.activators.BundleDeployer - Updating bundle com.agonist.wisdom.shiro - /Users/billey_b/dev/wisdom-shiro/wisdom-shiro/target/wisdom/application/wisdom-shiro-1.0-SNAPSHOT.jar
+22:21:20.269 1278488 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.LoginController@f18f80
+22:21:20.279 1278498 [monitor-application] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.WelcomeController@2d0338f9
+22:21:20.293 1278512 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.9:0/templates/login.thl.html from com.agonist.wisdom.shiro
+22:21:20.296 1278515 [monitor-application] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.9:0/templates/welcome.thl.html from com.agonist.wisdom.shiro
+22:21:20.311 1278530 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (bootstrap-3.1.1[64]) found in com.agonist.wisdom.shiro [64]
+22:21:20.312 1278531 [monitor-application] INFO  o.wisdom.resources.WebJarController - Web Jar library (jquery-2.1.0[64]) found in com.agonist.wisdom.shiro [64]
+22:21:20.316 1278535 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.10:0/templates/login.thl.html
+22:21:20.318 1278537 [monitor-application] INFO  o.w.t.t.ThymeleafTemplateCollector - Thymeleaf template added for bundle://64.10:0/templates/welcome.thl.html
+22:21:20.337 1278556 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.LoginController@558eded7
+22:21:20.346 1278565 [[iPOJO] pool-1-thread-1] INFO  org.wisdom.router.RequestRouter - Adding routes from sample.WelcomeController@acfc16e
+22:23:57.787 1436006 [Thread-0] INFO  org.ow2.chameleon - Stopping Chameleon
+22:23:59.672 1437891 [FelixStartLevel] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.LoginController@558eded7
+22:23:59.685 1437904 [FelixStartLevel] INFO  org.wisdom.router.RequestRouter - Removing routes from sample.WelcomeController@acfc16e
+22:23:59.705 1437924 [FelixStartLevel] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.10:0/templates/login.thl.html from com.agonist.wisdom.shiro
+22:23:59.716 1437935 [FelixStartLevel] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://64.10:0/templates/welcome.thl.html from com.agonist.wisdom.shiro
+22:23:59.726 1437945 [FelixStartLevel] INFO  org.wisdom.router.RequestRouter - Removing routes from org.wisdom.monitor.MonitorCenter@60d560ae
+22:23:59.727 1437946 [FelixStartLevel] INFO  o.w.c.jackson.JacksonSingleton - Removing Jackson module org.wisdom.monitor.service.MonitorExtension
+22:23:59.738 1437957 [FelixStartLevel] INFO  org.wisdom.router.RequestRouter - Removing routes from org.wisdom.monitor.extensions.dashboard.DashboardExtension@5c3821bf
+22:23:59.759 1437978 [FelixStartLevel] INFO  org.wisdom.router.RequestRouter - Removing routes from org.wisdom.monitor.extensions.ipojo.IPOJOController@7556e41b
+22:23:59.773 1437992 [FelixStartLevel] INFO  org.wisdom.router.RequestRouter - Removing routes from org.wisdom.monitor.extensions.logger.LoggerExtension@18a94cb9
+22:23:59.782 1438001 [FelixStartLevel] INFO  org.wisdom.router.RequestRouter - Removing routes from org.wisdom.monitor.extensions.osgi.BundleMonitorExtension@c7ba3f7
+22:23:59.792 1438011 [FelixStartLevel] INFO  org.wisdom.router.RequestRouter - Removing routes from org.wisdom.monitor.extensions.osgi.ServiceMonitorExtension@26b66e3c
+22:23:59.806 1438025 [FelixStartLevel] INFO  org.wisdom.router.RequestRouter - Removing routes from org.wisdom.monitor.extensions.terminal.WisitShellController@4e1ebfb0
+22:23:59.814 1438033 [FelixStartLevel] INFO  org.wisdom.router.RequestRouter - Removing routes from org.wisdom.monitor.extensions.wisdom.ControllerExtension@62fb6b
+22:23:59.823 1438042 [FelixStartLevel] INFO  org.wisdom.router.RequestRouter - Removing routes from org.wisdom.monitor.extensions.wisdom.RouterExtension@63a93fa2
+22:23:59.858 1438077 [FelixStartLevel] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://63.0:0/templates/monitor/bundles.thl.html from org.wisdom.framework.wisdom.monitor
+22:23:59.860 1438079 [FelixStartLevel] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://63.0:0/templates/monitor/controllers.thl.html from org.wisdom.framework.wisdom.monitor
+22:23:59.863 1438082 [FelixStartLevel] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://63.0:0/templates/monitor/dashboard.thl.html from org.wisdom.framework.wisdom.monitor
+22:23:59.865 1438084 [FelixStartLevel] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://63.0:0/templates/monitor/ipojo.thl.html from org.wisdom.framework.wisdom.monitor
+22:23:59.867 1438086 [FelixStartLevel] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://63.0:0/templates/monitor/layout.thl.html from org.wisdom.framework.wisdom.monitor
+22:23:59.869 1438088 [FelixStartLevel] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://63.0:0/templates/monitor/loggers.thl.html from org.wisdom.framework.wisdom.monitor
+22:23:59.872 1438091 [FelixStartLevel] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://63.0:0/templates/monitor/login.thl.html from org.wisdom.framework.wisdom.monitor
+22:23:59.874 1438093 [FelixStartLevel] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://63.0:0/templates/monitor/routes.thl.html from org.wisdom.framework.wisdom.monitor
+22:23:59.877 1438096 [FelixStartLevel] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://63.0:0/templates/monitor/services.thl.html from org.wisdom.framework.wisdom.monitor
+22:23:59.880 1438099 [FelixStartLevel] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://63.0:0/templates/monitor/terminal.thl.html from org.wisdom.framework.wisdom.monitor
+22:23:59.884 1438103 [FelixStartLevel] INFO  o.w.t.t.tracker.TemplateTracker - Thymeleaf template deleted for bundle://63.0:0/templates/monitor/tiles.thl.html from org.wisdom.framework.wisdom.monitor
+22:23:59.894 1438113 [FelixStartLevel] INFO  org.wisdom.router.RequestRouter - Removing routes from controllers.Documentation@3114240a
+22:24:00.664 1438883 [Thread-0] INFO  org.ow2.chameleon - Chameleon stopped
