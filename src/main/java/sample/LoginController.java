@@ -1,12 +1,8 @@
 package sample;
 
 import model.User;
-import org.apache.felix.ipojo.annotations.Validate;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
-import org.apache.shiro.config.Ini;
-import org.apache.shiro.mgt.DefaultSecurityManager;
-import org.apache.shiro.realm.text.IniRealm;
 import org.apache.shiro.subject.Subject;
 import org.wisdom.api.DefaultController;
 import org.wisdom.api.annotations.Body;
@@ -28,26 +24,6 @@ public class LoginController extends DefaultController {
 
     @View("access")
     Template accessDenied;
-
-    /**
-     * initialize shiro, by adding some roles and users
-     */
-    @Validate
-    public void init() {
-        Ini ini = new Ini();
-        Ini.Section usr = ini.addSection(IniRealm.USERS_SECTION_NAME);
-        Ini.Section roles = ini.addSection(IniRealm.ROLES_SECTION_NAME);
-
-        roles.put("ADMIN", "*");
-        roles.put("GEST", "*");
-
-        usr.put("admin", "admin, ADMIN");
-        usr.put("guest", "guest, GUEST");
-
-        org.apache.shiro.mgt.SecurityManager securityManager = new DefaultSecurityManager(new IniRealm(ini));
-        SecurityUtils.setSecurityManager(securityManager);
-    }
-
 
     /**
      * the login page
