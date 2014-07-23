@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>Protected area</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+
+
+<!--<ul th:each="op : ${operations}">-->
+<!--<li th:text="${op.name}"></li>-->
+<!--</ul>-->
+
+<p th:if="${user.isAdmin()}">I'm the admin so be nice with me</p>
+
+<p th:if="${user.isGuest()}">I'm just a guest</p>
+
+
+<form style="display: inline" action="#" method="get"
+      th:action="${#routes.route('sample.LoginController', 'logout')}">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Logout</button>
+</form>
+</body>
+</html>

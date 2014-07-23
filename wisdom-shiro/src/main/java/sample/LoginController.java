@@ -5,7 +5,7 @@ import org.apache.felix.ipojo.annotations.Validate;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.config.Ini;
-import org.apache.shiro.mgt.*;
+import org.apache.shiro.mgt.DefaultSecurityManager;
 import org.apache.shiro.realm.text.IniRealm;
 import org.apache.shiro.subject.Subject;
 import org.wisdom.api.DefaultController;
@@ -25,6 +25,9 @@ public class LoginController extends DefaultController {
 
     @View("login")
     Template login;
+
+    @View("access")
+    Template accessDenied;
 
     @Validate
     public void init() {
@@ -51,22 +54,27 @@ public class LoginController extends DefaultController {
     @Route(method = HttpMethod.POST, uri = "/login")
     public Result login(@Body User user) {
         Subject currentUser = SecurityUtils.getSubject();
-        UsernamePasswordToken token = new UsernamePasswordToken(user.getEmail(), user.getPassword());
+        UsernamePasswordToken token = new UsernamePasswordToken(user.getUsername(), user.getPassword());
         try {
-            currentUser.login( token );
-            //if no exception, that's it, we're done!
-        } catch ( UnknownAccountException uae ) {
-            //username wasn't in the system, show them an error message?
-        } catch ( IncorrectCredentialsException ice ) {
-            //password didn't match, try again?
-        } catch ( LockedAccountException lae ) {
-            //account for that username is locked - can't login.  Show them a message?
-        }
-        catch ( AuthenticationException ae ) {
-        //unexpected condition - error?
+            currentUser.login(token);
+        } catch (UnknownAccountException uae) {
+            return ok(render(accessDenied));
+        } catch (IncorrectCredentialsException ice) {
+            return ok(render(accessDenied));
+        } catch (LockedAccountException lae) {
+            return ok(render(accessDenied));
+        } catch (AuthenticationException ae) {
+            return ok(render(accessDenied));
         }
 
-        return ok(render(login));
+        return redirect("protected");
+    }
+
+    @Route(method = HttpMethod.GET, uri = "/logout")
+    public Result logout() {
+        Subject currentUser = SecurityUtils.getSubject();
+        currentUser.logout();
+        return redirect("login");
     }
 
 }
