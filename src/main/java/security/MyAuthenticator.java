@@ -34,6 +34,11 @@ public class MyAuthenticator implements Authenticator {
         return "my-authenticator";
     }
 
+    /**
+     * just check if the current user is logged in
+     * @param context
+     * @return
+     */
     @Override
     public String getUserName(Context context) {
         Subject currentUser = SecurityUtils.getSubject();

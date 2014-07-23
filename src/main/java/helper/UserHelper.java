@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * TODO write documentation<br>
+ * This helper will be used bu template to check user roles
  *<br>
  * Created at 22/07/2014 14:54.<br>
  *

@@ -29,6 +29,9 @@ public class LoginController extends DefaultController {
     @View("access")
     Template accessDenied;
 
+    /**
+     * initialize shiro, by adding some roles and users
+     */
     @Validate
     public void init() {
         Ini ini = new Ini();
@@ -46,15 +49,25 @@ public class LoginController extends DefaultController {
     }
 
 
-    @Route(method = HttpMethod.GET, uri = "/login")
+    /**
+     * the login page
+     * @return
+     */
+    @Route(method = HttpMethod.GET, uri = "/")
     public Result loginForm() {
         return ok(render(login));
     }
 
+    /**
+     * Called when you submit the login form
+     * @param user
+     * @return
+     */
     @Route(method = HttpMethod.POST, uri = "/login")
     public Result login(@Body User user) {
         Subject currentUser = SecurityUtils.getSubject();
         UsernamePasswordToken token = new UsernamePasswordToken(user.getUsername(), user.getPassword());
+        //that catch exceptions and do all the same things but it's just for the demo
         try {
             currentUser.login(token);
         } catch (UnknownAccountException uae) {
@@ -70,6 +83,10 @@ public class LoginController extends DefaultController {
         return redirect("protected");
     }
 
+    /**
+     * logout the current user
+     * @return
+     */
     @Route(method = HttpMethod.GET, uri = "/logout")
     public Result logout() {
         Subject currentUser = SecurityUtils.getSubject();

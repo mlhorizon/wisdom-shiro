@@ -30,6 +30,10 @@ public class ProtectedController extends DefaultController {
     @View("protected")
     Template protectedView;
 
+    /**
+     * this route is accessible only if you're logged. Try to visit /protected before login
+     * @return
+     */
     @Authenticated("my-authenticator")
     @Route(method = HttpMethod.GET, uri = "/protected")
     public Result protectedArea() {
