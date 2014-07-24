@@ -51,6 +51,6 @@ public class MyAuthenticator implements Authenticator {
 
     @Override
     public Result onUnauthorized(Context context) {
-        return Results.notFound("Your are not authenticated !");
+        return Results.ok("Your are not authenticated !");
     }
 }

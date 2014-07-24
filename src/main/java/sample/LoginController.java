@@ -43,7 +43,6 @@ public class LoginController extends DefaultController {
     public Result login(@Body User user) {
         Subject currentUser = SecurityUtils.getSubject();
         UsernamePasswordToken token = new UsernamePasswordToken(user.getUsername(), user.getPassword());
-        //that catch exceptions and do all the same things but it's just for the demo
         try {
             currentUser.login(token);
         } catch (UnknownAccountException uae) {

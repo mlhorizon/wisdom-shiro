@@ -37,8 +37,6 @@ public class ProtectedController extends DefaultController {
     @Authenticated("my-authenticator")
     @Route(method = HttpMethod.GET, uri = "/protected")
     public Result protectedArea() {
-
         return ok(render(protectedView, "user", new UserHelper()));
     }
-
 }
