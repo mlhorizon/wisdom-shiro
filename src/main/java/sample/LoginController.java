@@ -47,15 +47,18 @@ public class LoginController extends DefaultController {
         try {
             currentUser.login(token);
         } catch (UnknownAccountException uae) {
-            return ok(render(accessDenied));
+            context().flash().error("Unknown account");
+            return loginForm();
         } catch (IncorrectCredentialsException ice) {
-            return ok(render(accessDenied));
+            context().flash().error("Wrong password");
+            return loginForm();
         } catch (LockedAccountException lae) {
-            return ok(render(accessDenied));
+            context().flash().error("Account locked");
+            return loginForm();
         } catch (AuthenticationException ae) {
-            return ok(render(accessDenied));
+            context().flash().error("some error");
+            return loginForm();
         }
-
         return redirect("protected");
     }
 
@@ -67,7 +70,6 @@ public class LoginController extends DefaultController {
     public Result logout() {
         Subject currentUser = SecurityUtils.getSubject();
         currentUser.logout();
-        return redirect("login");
+        return redirect("/");
     }
-
 }
